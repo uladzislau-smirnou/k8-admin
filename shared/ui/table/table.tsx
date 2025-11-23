@@ -4,6 +4,7 @@ export const Table = <D extends {}>({
   columns,
   data,
   emptyDataText,
+  cellRenderer,
 }: TableProps<D>) => {
   if (!data.length) {
     return (
@@ -42,8 +43,8 @@ export const Table = <D extends {}>({
                 key={String(col.cellValueKey)}
                 className="px-6 py-4 whitespace-nowrap text-sm text-table-row-text"
               >
-                {col.cell
-                  ? col.cell(item[col.cellValueKey] as never)
+                {cellRenderer
+                  ? cellRenderer({ row: item, column: col })
                   : String(item[col.cellValueKey])}
               </td>
             ))}

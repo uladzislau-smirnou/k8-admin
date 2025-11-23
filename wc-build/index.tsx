@@ -22,8 +22,11 @@ const Pipeline = reactToWebComponent(PipelinesWithStyles, React, ReactDOM, {
     columns: 'json',
     data: 'json',
     themeKeys: 'string',
+    cellRenderer: 'function',
   },
-  events: { onAddPipeline: { bubbles: true, composed: true } },
+  events: {
+    onAddPipeline: { bubbles: true, composed: true },
+  },
 });
 
 customElements.define('sk8-pipelines', Pipeline);

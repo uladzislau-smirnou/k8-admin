@@ -7,6 +7,7 @@ export function Pipelines({
   pipelinesInfo,
   data,
   columns,
+  cellRenderer,
   onAddPipeline,
   themeKeys = 'blue',
 }: PipelinesProps) {
@@ -43,6 +44,7 @@ export function Pipelines({
         <Table
           data={data}
           columns={columns}
+          cellRenderer={cellRenderer}
           emptyDataText="No pipelines found"
         />
       </div>
