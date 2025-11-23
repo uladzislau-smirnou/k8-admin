@@ -1,0 +1,28 @@
+{
+  "name": "k8-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build:wc": "vite build --config wc-build/vite.config.ts"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "next": "16.0.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-to-webcomponent": "^2.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "^7.2.4"
+  }
+}
