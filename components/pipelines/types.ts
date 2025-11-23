@@ -3,7 +3,7 @@ import type { Column } from '../../shared/ui/table/types';
 
 export type PipelinesProps = {
   headerTitle: string;
-  headerPillText: string;
+  headerPillText?: string;
   pipelinesInfo: string;
   data: Pipeline[];
   columns: Column<Pipeline>[];

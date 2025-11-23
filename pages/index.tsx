@@ -107,18 +107,26 @@ export default function Home() {
   ];
 
   return (
-    <div className="p-4">
-      <Pipelines
-        columns={columns}
-        data={mockPipelines}
-        headerTitle="My Pipelines"
-        pipelinesInfo={pipelinesInfo}
-        headerPillText="Autonomous Data Infra"
-        onAddPipeline={() => {
-          alert('check');
-        }}
-        themeKeys="green"
-      />
+    <div className="flex flex-wrap gap-3">
+      <div className="w-full p-2 border">
+        <p>Admin header</p>
+      </div>
+      <div className="p-2 border">
+        <p>Admin navbar</p>
+      </div>
+      <div className="flex-1">
+        <Pipelines
+          columns={columns}
+          data={mockPipelines}
+          headerTitle="Tenant Pipelines"
+          pipelinesInfo={pipelinesInfo}
+          headerPillText="Autonomous Data Infra"
+          onAddPipeline={() => {
+            alert('check');
+          }}
+          themeKeys="green"
+        />
+      </div>
     </div>
   );
 }

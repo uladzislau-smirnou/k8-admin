@@ -2,7 +2,7 @@ import { Table } from '../../shared/ui/table/table';
 import type { PipelinesProps } from './types';
 
 export function Pipelines({
-  headerPillText,
+  headerPillText = 'Embedded Sk8 component',
   headerTitle,
   pipelinesInfo,
   data,
