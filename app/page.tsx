@@ -1,3 +1,4 @@
+'use client';
 import { useEffect, useState } from 'react';
 import { Pipelines } from '../components/pipelines/pipelines';
 import type { Pipeline } from '../shared/types/pipelines';
