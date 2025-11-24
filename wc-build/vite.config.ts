@@ -6,6 +6,9 @@ export default defineConfig({
   plugins: [react()],
   define: {
     'process.env.NODE_ENV': JSON.stringify('production'),
+    'process.env.NEXT_PUBLIC_APP_URL': JSON.stringify(
+      'https://k8-admin.vercel.app'
+    ),
   },
   build: {
     lib: {
