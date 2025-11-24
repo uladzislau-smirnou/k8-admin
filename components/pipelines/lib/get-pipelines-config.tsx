@@ -54,8 +54,7 @@ export const getPipelinesConfig = (mode: UsageMode, pipelines: Pipeline[]) => {
   }, 0);
 
   if (mode === USAGE_MODE.EMBED) {
-    const totalPipelines = pipelines.length;
-    const pipelinesInfo = `${activePipelines} active / ${totalPipelines} total`;
+    const pipelinesInfo = `${activePipelines} active pipelines`;
     const columns: Column<Pipeline>[] = [
       {
         columnHeader: 'pipeline Id',
@@ -81,7 +80,8 @@ export const getPipelinesConfig = (mode: UsageMode, pipelines: Pipeline[]) => {
       rowClassName,
     };
   } else {
-    const pipelinesInfo = `${activePipelines} active pipelines`;
+    const totalPipelines = pipelines.length;
+    const pipelinesInfo = `${activePipelines} active / ${totalPipelines} total`;
     const columns: Column<Pipeline>[] = [
       {
         columnHeader: 'tenant id',
@@ -101,7 +101,7 @@ export const getPipelinesConfig = (mode: UsageMode, pipelines: Pipeline[]) => {
       },
     ];
     const headerPillText = 'Autonomous Data Infra';
-    const headerTitle = 'Pipelines';
+    const headerTitle = 'Tenant Pipelines';
     return {
       headerTitle,
       headerPillText,
