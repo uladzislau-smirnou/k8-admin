@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const allowedOrigins = [
-  'https://k8-vendor.vercel.app',
-  'http://localhost:3000', // optional dev
-];
+const allowedOrigins = ['https://k8-vendor.vercel.app'];
 
 // Build CORS headers
 function corsHeaders(origin: string | null) {
