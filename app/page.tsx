@@ -1,23 +1,21 @@
-import { PipelinesClient } from '../components/pipelines-client/pipelines-client';
-import type { Pipeline } from '../shared/types/pipelines';
+import { Pipelines } from '../components/pipelines/pipelines';
 
-async function getPipelines() {
-  const res = await fetch(
-    'https://4y6vut7106.execute-api.us-east-1.amazonaws.com/v1/pipelines',
-    {
-      cache: 'no-store',
-    }
+export default function Home() {
+  return (
+    <div className="theme-green">
+      <div className="flex flex-wrap m-4 rounded-lg border border-(--pipelines-border)">
+        <div className="w-full p-2 border-b border-(--pipelines-border)">
+          <h2 className="text-2xl font-bold text-(--pipelines-text)">
+            Sk8 admin
+          </h2>
+        </div>
+        <div className="p-2 border-r border-(--pipelines-border) text-(--pipelines-text)">
+          <p>Admin navbar</p>
+        </div>
+        <div className="flex-1 p-5">
+          <Pipelines mode="local" theme="green" />
+        </div>
+      </div>
+    </div>
   );
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
-}
-
-export default async function Home() {
-  const pipelines: Pipeline[] = await getPipelines();
-
-  return <PipelinesClient initialPipelines={pipelines} />;
 }

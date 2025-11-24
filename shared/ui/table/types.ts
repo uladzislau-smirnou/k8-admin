@@ -12,4 +12,5 @@ export type TableProps<D extends {}> = {
   columns: Column<D>[];
   emptyDataText?: string;
   cellRenderer?: (data: { row: D; column: Column<D> }) => ReactNode;
+  rowClassName?: (row: D) => string;
 };

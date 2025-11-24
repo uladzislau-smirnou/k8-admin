@@ -16,16 +16,8 @@ const PipelinesWithStyles = (props: any) => {
 const Pipeline = reactToWebComponent(PipelinesWithStyles, React, ReactDOM, {
   shadow: 'open',
   props: {
-    headerPillText: 'string',
-    headerTitle: 'string',
-    pipelinesInfo: 'string',
-    columns: 'json',
-    data: 'json',
-    themeKeys: 'string',
-    cellRenderer: 'function',
-  },
-  events: {
-    onAddPipeline: { bubbles: true, composed: true },
+    tenantId: 'string',
+    theme: 'string',
   },
 });
 

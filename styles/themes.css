@@ -8,10 +8,15 @@
   --pill-text: #1e40af;
 
   --table-border: #93c5fd;
-  --table-header-bg: #eff6ff;
+  --table-header-bg: #cfe9ff;
   --table-header-text: #1e40af;
-  --table-row-bg: #ffffff;
+  --table-row-bg: #f7faff;
   --table-row-text: #1f2937;
+  --table-row-inactive-bg: #f5f5f5;
+
+  --toggle-bg-on: var(--pipelines-primary-bg);
+  --toggle-bg-off: var(--pill-bg);
+  --toggle-fg: var(--pipelines-primary-text);
 }
 
 .theme-green {
@@ -24,8 +29,13 @@
   --pill-text: #065f46;
 
   --table-border: #6ee7b7;
-  --table-header-bg: #f0fdf4;
+  --table-header-bg: #cfffd5;
   --table-header-text: #065f46;
-  --table-row-bg: #ffffff;
+  --table-row-bg: #f8fdfa;
   --table-row-text: #1f2937;
+  --table-row-inactive-bg: #f5f5f5;
+
+  --toggle-bg-on: var(--pipelines-primary-bg);
+  --toggle-bg-off: var(--pill-bg);
+  --toggle-fg: var(--pipelines-primary-text);
 }

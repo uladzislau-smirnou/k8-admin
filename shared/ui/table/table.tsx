@@ -5,6 +5,7 @@ export const Table = <D extends {}>({
   data,
   emptyDataText,
   cellRenderer,
+  rowClassName,
 }: TableProps<D>) => {
   if (!data.length) {
     return (
@@ -17,13 +18,13 @@ export const Table = <D extends {}>({
   return (
     <div className="w-full border border-(--table-border) rounded-lg overflow-hidden">
       <table className="w-full">
-        <thead className="bg-(--table-header-bg) min-w-full divide-y divide-(--table-border)">
+        <thead className="bg-(--table-header-bg) min-w-full divide-y divide-(--table-border) border-b border-(--table-border)">
           <tr>
             {columns.map((column, index) => (
               <th
                 key={index}
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-(--table-header-text) uppercase tracking-wider"
+                className="px-6 py-3 text-left text-xs font-semibold text-(--table-header-text) uppercase tracking-wider"
               >
                 {column.columnHeader}
               </th>
@@ -31,10 +32,13 @@ export const Table = <D extends {}>({
           </tr>
         </thead>
         <tbody
-          className={`p-4 bg-(--table-row-bg) divide-y divide-(--table-border)`}
+          className={`p-4 divide-y divide-(--table-border)`}
         >
           {data.map((item, rowIndex) => (
-            <tr key={rowIndex}>
+            <tr
+              key={rowIndex}
+              className={`table-row ${rowClassName ? rowClassName(item) : ''}`}
+            >
               {columns.map((col) => (
                 <td
                   key={String(col.cellValueKey)}
