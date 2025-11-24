@@ -1,11 +1,16 @@
 'use client';
+import { USAGE_MODE } from '../../shared/constants/pipelines';
 import { Table } from '../../shared/ui/table/table';
 import { useFetchPipelines } from './hooks/use-fetch-pipeline';
 import { getPipelinesConfig } from './lib/get-pipelines-config';
 import type { PipelinesProps } from './types';
 
-export function Pipelines({ tenantId, mode = 'embed', theme }: PipelinesProps) {
-  if (mode === 'embed' && !tenantId)
+export function Pipelines({
+  tenantId,
+  mode = USAGE_MODE.EMBED,
+  theme,
+}: PipelinesProps) {
+  if (mode === USAGE_MODE.EMBED && !tenantId)
     throw new Error('Provide a valid tetantId');
 
   const { isLoading, errorMessage, pipelines } = useFetchPipelines(

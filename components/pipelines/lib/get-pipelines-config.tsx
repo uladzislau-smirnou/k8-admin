@@ -70,7 +70,7 @@ export const getPipelinesConfig = (mode: UsageMode, pipelines: Pipeline[]) => {
       },
     ];
     const headerPillText = 'Embedded Sk8 component';
-    const headerTitle = 'Sk8 Admin';
+    const headerTitle = 'My pipelines';
     return {
       headerTitle,
       headerPillText,
