@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const allowedOrigins = ['https://k8-vendor.vercel.app'];
 
-// Build CORS headers
 function corsHeaders(origin: string | null) {
   const isAllowed = origin && allowedOrigins.includes(origin);
 
@@ -14,7 +13,6 @@ function corsHeaders(origin: string | null) {
   };
 }
 
-// Preflight request
 export async function OPTIONS(req: NextRequest) {
   const origin = req.headers.get('origin');
 
