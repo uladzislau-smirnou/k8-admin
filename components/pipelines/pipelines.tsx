@@ -13,8 +13,8 @@ export function Pipelines({
 }: PipelinesProps) {
   return (
     <div className={`theme-${themeKeys}`}>
-      <div className="p-5 font-sans border border-solid border-(--pipelines-border) text-(--pipelines-text)">
-        <div className="flex justify-between items-center p-4">
+      <div className="font-sans p-5 rounded-lg border border-(--pipelines-border) text-(--pipelines-text)">
+        <div className="flex justify-between items-center mb-3 pb-3 border-b border-(--pipelines-border) border-dashed">
           <div className="flex items-center gap-2">
             <h2 className="text-lg font-semibold text-(--pipelines-text)">
               {headerTitle}
@@ -32,8 +32,8 @@ export function Pipelines({
             <p className="text-(--pipelines-text)">{pipelinesInfo}</p>
 
             <button
-              className="p-1 rounded-full cursor-pointer border-none leading-none
-              bg-(--pipelines-primary-bg) text-(--pipelines-primary-text)"
+              className="px-4 py-2 rounded-full cursor-pointer border-none leading-none
+              bg-(--pipelines-primary-bg) text-(--pipelines-primary-text) capitalize"
               onClick={onAddPipeline}
             >
               add pipeline

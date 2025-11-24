@@ -1,33 +1,31 @@
 .theme-blue {
-  --pipelines-border: #bfdbfe; /* light blue border */
-  --pipelines-text: #1e3a8a; /* blue-900 */
-  --pipelines-primary-bg: #3b82f6; /* blue-500 */
+  --pipelines-border: #bfdbfe;
+  --pipelines-text: #1e3a8a;
+  --pipelines-primary-bg: #3b82f6;
   --pipelines-primary-text: #ffffff;
 
-  --pill-bg: #dbeafe; /* blue-100 */
-  --pill-text: #1e40af; /* blue-800 */
+  --pill-bg: #dbeafe;
+  --pill-text: #1e40af;
 
-  /* New table variables for theme-blue */
-  --table-border: #93c5fd; /* blue-300 */
-  --table-header-bg: #eff6ff; /* blue-50 */
-  --table-header-text: #1e40af; /* blue-800 */
-  --table-row-bg: #ffffff; /* white */
-  --table-row-text: #1f2937; /* gray-800 */
+  --table-border: #93c5fd;
+  --table-header-bg: #eff6ff;
+  --table-header-text: #1e40af;
+  --table-row-bg: #ffffff;
+  --table-row-text: #1f2937;
 }
 
 .theme-green {
-  --pipelines-border: #bbf7d0; /* light green border */
-  --pipelines-text: #065f46; /* green-900 */
-  --pipelines-primary-bg: #10b981; /* green-500 */
+  --pipelines-border: #bbf7d0;
+  --pipelines-text: #065f46;
+  --pipelines-primary-bg: #10b981;
   --pipelines-primary-text: #ffffff;
 
-  --pill-bg: #d1fae5; /* green-100 */
-  --pill-text: #065f46; /* green-900 */
+  --pill-bg: #d1fae5;
+  --pill-text: #065f46;
 
-  /* New table variables for theme-green */
-  --table-border: #6ee7b7; /* green-300 */
-  --table-header-bg: #f0fdf4; /* green-50 */
-  --table-header-text: #065f46; /* green-900 */
-  --table-row-bg: #ffffff; /* white */
-  --table-row-text: #1f2937; /* gray-800 */
+  --table-border: #6ee7b7;
+  --table-header-bg: #f0fdf4;
+  --table-header-text: #065f46;
+  --table-row-bg: #ffffff;
+  --table-row-text: #1f2937;
 }
